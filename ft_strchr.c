@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 14:53:30 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/09 16:23:35 by seungbae         ###   ########seoul.kr  */
+/*   Created: 2022/07/09 16:12:26 by seungbae          #+#    #+#             */
+/*   Updated: 2022/07/09 16:14:07 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-void	ft_bzero(void *s, size_t n)
+char	*strchr(const char *s, int c)
 {
-	ft_memset(s, 0, n);
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			return (s[i]);
+		i++;
+	}
+	return (0);
 }
