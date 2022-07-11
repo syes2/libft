@@ -6,11 +6,11 @@
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 14:53:30 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/09 16:23:35 by seungbae         ###   ########seoul.kr  */
+/*   Updated: 2022/07/11 16:32:16 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

@@ -6,7 +6,7 @@
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 16:14:46 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/09 16:23:32 by seungbae         ###   ########seoul.kr  */
+/*   Updated: 2022/07/11 16:35:34 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == c)
-			return (s[i]);
+			return (&s[i]);
 		i--;
 	}
 	return (0);

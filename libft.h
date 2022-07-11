@@ -30,7 +30,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t len);
 /*
 *** Memory
 */
-void		*ft_memset(void *ptr, int value, size_t num);
+void		*ft_memset(void *b, int c, size_t len);
 void		*ft_memcpy(void *dst, const void *src, size_t num);
 void		*ft_memccpy(void *dst, const void *src, int c, size_t num);
 void		*ft_memmove(void *dst, const void *src, size_t num);

@@ -6,11 +6,11 @@
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 16:12:26 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/09 16:14:07 by seungbae         ###   ########seoul.kr  */
+/*   Updated: 2022/07/11 16:51:02 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
@@ -18,7 +18,7 @@ char	*strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == c)
-			return (s[i]);
+			return (&s[i]);
 		i++;
 	}
 	return (0);
