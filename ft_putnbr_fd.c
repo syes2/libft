@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 19:57:55 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/19 17:09:20 by seungbae         ###   ########seoul.kr  */
+/*   Created: 2022/07/19 18:55:27 by seungbae          #+#    #+#             */
+/*   Updated: 2022/07/19 19:06:57 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned char	*tmp_dst;
-	unsigned char	*tmp_src;
-	unsigned int	i;
+	char	c;
 
-	if (!dst && !src)
-		return (dst);
-	tmp_dst = (unsigned char *)dst;
-	tmp_src = (unsigned char *)src;
-	i = -1;
-	if (dst < src)
+	if (n == -2147483648)
 	{
-		while (++i < n)
-			tmp_dst[i] = tmp_src[i];
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	else if (n < 0)
+	{
+		write(fd, "-", 1);
+		ft_putnbr_fd(n * -1, fd);
+	}
+	else if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		c = (n % 10) + '0';
+		write(fd, &c, 1);
 	}
 	else
 	{
-		while (++i < n)
-			tmp_dst[n - 1 - i] = tmp_src[n - 1 - i];
+		c = n + '0';
+		write(fd, &c, 1);
 	}
-	return (dst);
 }

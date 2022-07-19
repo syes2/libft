@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 19:57:55 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/19 17:09:20 by seungbae         ###   ########seoul.kr  */
+/*   Created: 2022/07/19 12:58:46 by seungbae          #+#    #+#             */
+/*   Updated: 2022/07/19 16:30:26 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+char	*ft_strdup(char *src)
 {
-	unsigned char	*tmp_dst;
-	unsigned char	*tmp_src;
-	unsigned int	i;
+	char	*result;
+	int		i;
 
-	if (!dst && !src)
-		return (dst);
-	tmp_dst = (unsigned char *)dst;
-	tmp_src = (unsigned char *)src;
-	i = -1;
-	if (dst < src)
+	i = 0;
+	while (src[i])
+		i++;
+	result = (char *)malloc(sizeof(char) * i + 1);
+	i = 0;
+	if (result == NULL)
+		return (NULL);
+	while (src[i])
 	{
-		while (++i < n)
-			tmp_dst[i] = tmp_src[i];
+		result[i] = src[i];
+		i++;
 	}
-	else
-	{
-		while (++i < n)
-			tmp_dst[n - 1 - i] = tmp_src[n - 1 - i];
-	}
-	return (dst);
+	result[i] = '\0';
+	return (result);
 }

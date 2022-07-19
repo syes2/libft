@@ -6,16 +6,16 @@
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 15:11:02 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/09 15:11:02 by seungbae         ###   ########seoul.kr  */
+/*   Updated: 2022/07/19 17:10:04 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	count;
-	unsigned int	i;
+	size_t	count;
+	size_t	i;
 
 	count = 0;
 	i = 0;

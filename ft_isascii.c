@@ -6,13 +6,15 @@
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 14:24:39 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/09 15:08:28 by seungbae         ###   ########seoul.kr  */
+/*   Updated: 2022/07/19 16:16:13 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isascii(int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 256)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

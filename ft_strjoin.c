@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 19:57:55 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/19 17:09:20 by seungbae         ###   ########seoul.kr  */
+/*   Created: 2022/07/19 13:07:50 by seungbae          #+#    #+#             */
+/*   Updated: 2022/07/19 16:47:18 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned char	*tmp_dst;
-	unsigned char	*tmp_src;
-	unsigned int	i;
+	char	*res;
+	int		i;
+	int		j;
 
-	if (!dst && !src)
-		return (dst);
-	tmp_dst = (unsigned char *)dst;
-	tmp_src = (unsigned char *)src;
-	i = -1;
-	if (dst < src)
+	res = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!res)
+		return (0);
+	i = 0;
+	j = 0;
+	while (s1[i])
 	{
-		while (++i < n)
-			tmp_dst[i] = tmp_src[i];
+		res[i] = s1[i];
+		i++;
 	}
-	else
+	while (s2[j])
 	{
-		while (++i < n)
-			tmp_dst[n - 1 - i] = tmp_src[n - 1 - i];
+		res[i] = s2[j];
+		i++;
+		j++;
 	}
-	return (dst);
+	res[i] = '\0';
+	return (res);
 }
