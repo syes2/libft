@@ -6,7 +6,7 @@
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:53:54 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/19 19:01:22 by seungbae         ###   ########seoul.kr  */
+/*   Updated: 2022/07/20 15:14:04 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,14 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	int	i;
+
+	i = 0;
 	if (fd < 0 || !s)
 		return ;
-	write(fd, &s, ft_strlen(s));
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }

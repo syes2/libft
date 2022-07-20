@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 12:58:54 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/20 16:27:49 by seungbae         ###   ########seoul.kr  */
+/*   Created: 2022/07/20 17:35:30 by seungbae          #+#    #+#             */
+/*   Updated: 2022/07/20 17:52:11 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	n = 0;
-	return (0);
+	int	i;
+
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i])
+	{
+		f(i, &s[i])
+		i++;
+	}
 }
