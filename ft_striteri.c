@@ -6,7 +6,7 @@
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 17:35:30 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/20 17:52:11 by seungbae         ###   ########seoul.kr  */
+/*   Updated: 2022/07/22 15:33:06 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		return ;
 	while (s[i])
 	{
-		f(i, &s[i])
+		f(i, &s[i]);
 		i++;
 	}
 }
