@@ -6,11 +6,9 @@
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 14:31:55 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/19 16:29:48 by seungbae         ###   ########seoul.kr  */
+/*   Updated: 2022/07/29 17:07:41 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {

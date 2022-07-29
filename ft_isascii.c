@@ -6,11 +6,9 @@
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 14:24:39 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/19 16:16:13 by seungbae         ###   ########seoul.kr  */
+/*   Updated: 2022/07/29 15:13:47 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int c)
 {

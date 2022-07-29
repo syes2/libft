@@ -6,11 +6,11 @@
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 14:30:20 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/19 13:04:36 by seungbae         ###   ########seoul.kr  */
+/*   Updated: 2022/07/29 17:17:21 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

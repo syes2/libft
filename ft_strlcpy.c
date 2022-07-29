@@ -6,11 +6,11 @@
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 15:11:02 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/19 17:10:04 by seungbae         ###   ########seoul.kr  */
+/*   Updated: 2022/07/29 17:17:13 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

@@ -6,7 +6,7 @@
 /*   By: seungbae <seungbae@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 19:57:55 by seungbae          #+#    #+#             */
-/*   Updated: 2022/07/19 17:09:20 by seungbae         ###   ########seoul.kr  */
+/*   Updated: 2022/07/29 14:25:07 by seungbae         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	unsigned char	*tmp_dst;
-	unsigned char	*tmp_src;
+	unsigned char	*d;
+	unsigned char	*s;
 	unsigned int	i;
 
 	if (!dst && !src)
 		return (dst);
-	tmp_dst = (unsigned char *)dst;
-	tmp_src = (unsigned char *)src;
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
 	i = -1;
 	if (dst < src)
 	{
 		while (++i < n)
-			tmp_dst[i] = tmp_src[i];
+			d[i] = s[i];
 	}
 	else
 	{
 		while (++i < n)
-			tmp_dst[n - 1 - i] = tmp_src[n - 1 - i];
+			d[n - 1 - i] = s[n - 1 - i];
 	}
 	return (dst);
 }
